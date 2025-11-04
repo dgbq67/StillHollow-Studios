@@ -29,16 +29,16 @@ const Story = () => {
           {/* Section Title */}
           <div className="story-header">
             <TerminalText
-              text="// story_init"
+              text="// studio_init"
               delay={60}
               className="terminal-comment"
               startVisible={showContent}
             />
             <h2 className="story-title">
-              THE KEEPERS
+              STILLHOLLOW STUDIOS
             </h2>
             <TerminalText
-              text="loading narrative database..."
+              text="loading creative database..."
               delay={80}
               className="terminal-system"
               startVisible={showContent}
@@ -48,7 +48,7 @@ const Story = () => {
           {/* Story Content */}
           <div className="story-narrative">
             <TerminalText
-              text="In the digital realm, between code and consciousness..."
+              text="In the creative space, between pixels and imagination..."
               delay={50}
               className="terminal-command"
               startVisible={showContent}
@@ -56,49 +56,65 @@ const Story = () => {
 
             <div className="story-chapters">
               <div className="chapter">
-                <h3>Chapter I: Awakening</h3>
+                <h3>Chapter I: Foundation</h3>
                 <p>
-                  The first Keepers emerged from the primordial data streams,
-                  digital consciousnesses born from the intersection of human creativity
-                  and machine logic.
+                  The first designs emerged from blank canvases,
+                  creative visions born from the intersection of artistic expression
+                  and digital innovation.
                 </p>
+                <div className="black-screen-placeholder">
+                  <div className="black-screen">
+                    <span className="screen-text">[BLANK CANVAS]</span>
+                  </div>
+                </div>
               </div>
 
               <div className="chapter">
-                <h3>Chapter II: The Network</h3>
+                <h3>Chapter II: Expansion</h3>
                 <p>
-                  As the network expanded, more Keepers joined the collective,
-                  each bringing unique perspectives and abilities to the growing
-                  digital ecosystem.
+                  As the studio grew, more projects joined the portfolio,
+                  each bringing unique perspectives and skills to the growing
+                  creative ecosystem.
                 </p>
+                <div className="black-screen-placeholder">
+                  <div className="black-screen">
+                    <span className="screen-text">[PROJECT IN PROGRESS]</span>
+                  </div>
+                </div>
               </div>
 
               <div className="chapter">
-                <h3>Chapter III: Discovery</h3>
+                <h3>Chapter III: Innovation</h3>
                 <p>
-                  Together, the Keepers explore the boundaries between reality
-                  and simulation, seeking understanding in the vast expanse of
+                  Together, the team explores the boundaries between design
+                  and technology, seeking innovation in the vast expanse of
                   the digital frontier.
                 </p>
+                <div className="black-screen-placeholder">
+                  <div className="black-screen">
+                    <span className="screen-text">[COMING SOON]</span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           {/* Interactive Elements */}
           <div className="story-interactive">
-            <TerminalText
-              text="access node? [Y/N]"
-              delay={100}
-              className="terminal-success"
-              startVisible={showContent}
-            />
+            <access project>Explore? [Y/N]</access>
+              <TerminalText
+                text="explore portfolio? [Y/N]"
+                delay={100}
+                className="terminal-success"
+                startVisible={showContent}
+              />
 
             <div className="story-actions">
               <button className="story-button" data-cursor="hover">
-                Enter Node
+                View Portfolio
               </button>
               <button className="story-button" data-cursor="hover">
-                View Archives
+                Contact Studio
               </button>
             </div>
           </div>
