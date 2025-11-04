@@ -66,7 +66,7 @@ const Hero = () => {
         <div className="hero-content">
           {/* Main Title */}
           <h1 className="hero-title">
-            KPR VERSE
+            SHS
           </h1>
 
           {/* Terminal Container */}
