@@ -121,6 +121,24 @@ const Hero = () => {
             </div>
           </div>
 
+          {/* Music Container */}
+          <div className="music-container">
+            <h3 className="music-title">Music Player</h3>
+            <div className="music-player">
+              <div className="music-controls">
+                <button className="music-btn" data-cursor="hover">▶</button>
+                <button className="music-btn" data-cursor="hover">⏸</button>
+                <button className="music-btn" data-cursor="hover">⏹</button>
+              </div>
+              <div className="music-info">
+                <span className="track-name">No Track Loaded</span>
+                <div className="progress-bar">
+                  <div className="progress-fill"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
           {/* Discover Button */}
           {showDiscoverButton && (
             <button
@@ -128,7 +146,7 @@ const Hero = () => {
               onClick={handleDiscoverClick}
               data-cursor="hover"
             >
-              Discover More
+              Explore Studio
             </button>
           )}
         </div>
