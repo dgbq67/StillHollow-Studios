@@ -1,0 +1,282 @@
+/* Parallax Layer Styles */
+.parallax-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.parallax-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+}
+
+/* Parallax background layer */
+.parallax-background {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  right: 0;
+  bottom: -20%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Parallax foreground layer */
+.parallax-foreground {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Parallax speeds */
+.parallax-slow {
+  transform: translate3d(0, 0, 0) scale(1.1);
+}
+
+.parallax-medium {
+  transform: translate3d(0, 0, 0) scale(1.05);
+}
+
+.parallax-fast {
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+/* Hero parallax styles */
+.hero-parallax {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  right: 0;
+  bottom: -10%;
+  background: linear-gradient(180deg, #000 0%, #111 50%, #000 100%);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+.hero-background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background:
+    radial-gradient(circle at 20% 50%, rgba(0, 255, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(255, 170, 0, 0.05) 0%, transparent 50%);
+  animation: float 20s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) rotate(0deg);
+  }
+  33% {
+    transform: translate3d(20px, -10px, 0) rotate(1deg);
+  }
+  66% {
+    transform: translate3d(-10px, 15px, 0) rotate(-1deg);
+  }
+}
+
+/* Parallax content layers */
+.parallax-content {
+  position: relative;
+  z-index: 1;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Section parallax */
+.section-parallax {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.parallax-section-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #0a0a0a 100%);
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Parallax speed data attributes */
+[data-parallax-speed="0.1"] {
+  transition: transform 0.1s ease-out;
+}
+
+[data-parallax-speed="0.3"] {
+  transition: transform 0.1s ease-out;
+}
+
+[data-parallax-speed="0.5"] {
+  transition: transform 0.1s ease-out;
+}
+
+[data-parallax-speed="0.8"] {
+  transition: transform 0.1s ease-out;
+}
+
+[data-parallax-speed="1.2"] {
+  transition: transform 0.1s ease-out;
+}
+
+/* Parallax elements */
+.parallax-element {
+  position: absolute;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+}
+
+/* Parallax grid pattern */
+.parallax-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    linear-gradient(rgba(0, 255, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 0, 0.1) 1px, transparent 1px);
+  background-size: 50px 50px;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  opacity: 0.3;
+}
+
+/* Parallax particles */
+.parallax-particle {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #00ff00;
+  border-radius: 50%;
+  opacity: 0.5;
+  transform: translate3d(0, 0, 0);
+  will-change: transform;
+  box-shadow: 0 0 4px rgba(0, 255, 0, 0.8);
+}
+
+/* Performance optimizations */
+.parallax-optimized {
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+  will-change: transform;
+}
+
+/* Mobile parallax adjustments */
+@media (max-width: 768px) {
+  .parallax-background {
+    transform: translate3d(0, 0, 0) scale(1.2);
+  }
+
+  .hero-background {
+    top: -5%;
+    bottom: -5%;
+  }
+
+  .parallax-grid {
+    background-size: 30px 30px;
+  }
+
+  /* Reduce parallax effects on mobile for performance */
+  [data-parallax-speed] {
+    transform: translate3d(0, 0, 0) !important;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .parallax-background,
+  .parallax-foreground,
+  .parallax-content,
+  .parallax-element,
+  .hero-background::before,
+  .parallax-grid,
+  .parallax-particle {
+    transform: none !important;
+    animation: none !important;
+  }
+
+  .parallax-element {
+    position: relative;
+  }
+}
+
+/* Parallax loading state */
+.parallax-loading {
+  opacity: 0;
+  transition: opacity 0.5s ease-out;
+}
+
+.parallax-loaded {
+  opacity: 1;
+}
+
+/* Scroll-based parallax animations */
+.parallax-fade-in {
+  opacity: 0;
+  transform: translate3d(0, 50px, 0);
+  transition: all 0.8s ease-out;
+}
+
+.parallax-fade-in.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.parallax-slide-left {
+  opacity: 0;
+  transform: translate3d(-50px, 0, 0);
+  transition: all 0.8s ease-out;
+}
+
+.parallax-slide-left.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.parallax-slide-right {
+  opacity: 0;
+  transform: translate3d(50px, 0, 0);
+  transition: all 0.8s ease-out;
+}
+
+.parallax-slide-right.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.parallax-scale {
+  opacity: 0;
+  transform: translate3d(0, 0, 0) scale(0.8);
+  transition: all 0.8s ease-out;
+}
+
+.parallax-scale.visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
