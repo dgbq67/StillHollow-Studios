@@ -5,20 +5,20 @@ import './globals.css';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'KPR VERSE - Keepers of the Realm',
-  description: 'A collective narrative experience in the digital realm. Explore the story of the Keepers through interactive storytelling, media, and immersive experiences.',
-  keywords: ['KPR', 'KPR VERSE', 'Keepers', 'NFT', 'Digital Art', 'Storytelling', 'Interactive'],
-  authors: [{ name: 'KPR VERSE' }],
+  title: 'SHS - StillHollow Studios',
+  description: 'Creative studio featuring parallax scrolling effects, custom cursor interactions, and immersive web experiences.',
+  keywords: ['SHS', 'StillHollow Studios', 'Creative', 'Digital Art', 'Parallax', 'Interactive'],
+  authors: [{ name: 'StillHollow Studios' }],
   openGraph: {
-    title: 'KPR VERSE - Keepers of the Realm',
-    description: 'A collective narrative experience in the digital realm',
+    title: 'SHS - StillHollow Studios',
+    description: 'Creative studio featuring parallax scrolling effects and immersive web experiences',
     type: 'website',
     locale: 'en_US',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'KPR VERSE - Keepers of the Realm',
-    description: 'A collective narrative experience in the digital realm',
+    title: 'SHS - StillHollow Studios',
+    description: 'Creative studio featuring parallax scrolling effects and immersive web experiences',
   },
   viewport: {
     width: 'device-width',
