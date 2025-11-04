@@ -89,7 +89,7 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-bottom-content">
             <p className="footer-copyright">
-              © {currentYear} KPR VERSE. All rights reserved.
+              © {currentYear} StillHollow Studios. All rights reserved.
             </p>
             <div className="footer-bottom-links">
               <a href="#" className="footer-bottom-link" data-cursor="hover">
