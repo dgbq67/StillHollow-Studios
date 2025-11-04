@@ -318,6 +318,93 @@ const Hero = () => {
           transform: translateY(-2px);
         }
 
+        .music-container {
+          margin: 40px 0;
+          padding: 30px;
+          background: rgba(0, 0, 0, 0.7);
+          border: 1px solid rgba(0, 255, 0, 0.3);
+          border-radius: 8px;
+          backdrop-filter: blur(10px);
+        }
+
+        .music-title {
+          font-size: 18px;
+          color: #00ff00;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          margin-bottom: 20px;
+          text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+        }
+
+        .music-player {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .music-controls {
+          display: flex;
+          justify-content: center;
+          gap: 15px;
+        }
+
+        .music-btn {
+          background: transparent;
+          border: 1px solid #00ff00;
+          color: #00ff00;
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          font-size: 18px;
+          cursor: none;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        @media (pointer: coarse) {
+          .music-btn {
+            cursor: pointer;
+          }
+        }
+
+        .music-btn:hover {
+          background: rgba(0, 255, 0, 0.1);
+          border-color: #ffaa00;
+          color: #ffaa00;
+          transform: scale(1.1);
+        }
+
+        .music-info {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          align-items: center;
+        }
+
+        .track-name {
+          color: #888;
+          font-size: 14px;
+          text-align: center;
+        }
+
+        .progress-bar {
+          width: 100%;
+          height: 4px;
+          background: rgba(255, 255, 255, 0.1);
+          border-radius: 2px;
+          overflow: hidden;
+        }
+
+        .progress-fill {
+          height: 100%;
+          width: 0%;
+          background: linear-gradient(90deg, #00ff00, #ffaa00);
+          border-radius: 2px;
+          transition: width 0.3s ease;
+        }
+
         .hero-loading {
           position: absolute;
           bottom: 40px;
