@@ -1,0 +1,217 @@
+/* Terminal Text Styles */
+.terminal-text {
+  margin: 8px 0;
+  font-size: 16px;
+  line-height: 1.4;
+  font-family: 'Courier New', monospace;
+}
+
+.terminal-cursor {
+  animation: blink 1s infinite;
+  color: #00ff00;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50% {
+    opacity: 1;
+  }
+  51%, 100% {
+    opacity: 0;
+  }
+}
+
+/* Terminal text variations */
+.terminal-comment {
+  color: #666;
+  font-style: italic;
+}
+
+.terminal-command {
+  color: #00ff00;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.terminal-file {
+  color: #ffaa00;
+  margin-left: 20px;
+}
+
+.terminal-system {
+  color: #00ffff;
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+}
+
+.terminal-error {
+  color: #ff0000;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+}
+
+.terminal-success {
+  color: #00ff00;
+  font-weight: bold;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+/* Loading text styles */
+.loading-text {
+  color: #ffaa00;
+  font-weight: bold;
+  animation: pulse 1.5s infinite;
+}
+
+.loading-percentage {
+  color: #00ff00;
+  font-weight: bold;
+  min-width: 50px;
+  display: inline-block;
+}
+
+/* Progress bar styles */
+.terminal-progress {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #333;
+  background: #111;
+  margin: 10px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00ff00, #00ffff);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+}
+
+/* ASCII art styles */
+.ascii-art {
+  font-family: 'Courier New', monospace;
+  color: #00ff00;
+  white-space: pre;
+  line-height: 1;
+  font-size: 14px;
+  text-shadow: 0 0 3px rgba(0, 255, 0, 0.3);
+}
+
+/* Terminal container */
+.terminal-container {
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #333;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.terminal-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(180deg, #222, #111);
+  border-bottom: 1px solid #333;
+}
+
+.terminal-container::after {
+  content: '• • •';
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  color: #ff0000;
+  font-size: 12px;
+  letter-spacing: 8px;
+}
+
+/* Hero section terminal styling */
+.hero .terminal-text {
+  color: #00ff00;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  font-size: 18px;
+  margin: 12px 0;
+}
+
+.hero .terminal-comment {
+  color: #888;
+  font-size: 16px;
+}
+
+.hero .terminal-file {
+  color: #ffaa00;
+  margin-left: 24px;
+  font-size: 17px;
+}
+
+.hero .terminal-system {
+  color: #00ffff;
+  font-size: 19px;
+  text-shadow: 0 0 10px rgba(0, 255, 255, 0.7);
+}
+
+/* Glitch effect for terminal text */
+.terminal-glitch {
+  animation: glitch 2s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+  25% {
+    text-shadow: -2px 0 #ff0000, 2px 0 #00ffff;
+  }
+  50% {
+    text-shadow: 2px 0 #ff0000, -2px 0 #00ffff;
+  }
+  75% {
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+  }
+}
+
+/* Scan line effect */
+.terminal-scanline {
+  position: relative;
+  overflow: hidden;
+}
+
+.terminal-scanline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(0, 255, 0, 0.5), transparent);
+  animation: scanline 3s linear infinite;
+}
+
+@keyframes scanline {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: 100%;
+  }
+}
+
+/* Responsive terminal text */
+@media (max-width: 768px) {
+  .terminal-text {
+    font-size: 14px;
+  }
+
+  .hero .terminal-text {
+    font-size: 16px;
+  }
+
+  .terminal-container {
+    padding: 15px;
+  }
+}
