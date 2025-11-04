@@ -61,7 +61,7 @@ const Navigation = () => {
           {/* Logo */}
           <div className="nav-logo">
             <Link href="/" className="logo-text">
-              KPR
+              SHS
             </Link>
           </div>
 
