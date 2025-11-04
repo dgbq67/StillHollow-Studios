@@ -11,9 +11,9 @@ const Footer = () => {
         <div className="footer-content">
           {/* Brand Section */}
           <div className="footer-brand">
-            <h3 className="footer-title">KPR VERSE</h3>
+            <h3 className="footer-title">SHS</h3>
             <p className="footer-description">
-              Keepers of the Realm - A collective narrative experience
+              StillHollow Studios - Creative Digital Experience Studio
             </p>
           </div>
 
@@ -23,27 +23,27 @@ const Footer = () => {
             <ul className="footer-links">
               <li>
                 <Link href="/" className="footer-link" data-cursor="hover">
-                  Story
+                  Portfolio
                 </Link>
               </li>
               <li>
-                <Link href="/journal" className="footer-link" data-cursor="hover">
-                  Journal
+                <Link href="/projects" className="footer-link" data-cursor="hover">
+                  Projects
                 </Link>
               </li>
               <li>
-                <Link href="/media" className="footer-link" data-cursor="hover">
-                  Media
+                <Link href="/studio" className="footer-link" data-cursor="hover">
+                  Studio
                 </Link>
               </li>
               <li>
-                <Link href="/gallery" className="footer-link" data-cursor="hover">
-                  Gallery
+                <Link href="/services" className="footer-link" data-cursor="hover">
+                  Services
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="footer-link" data-cursor="hover">
-                  About
+                <Link href="/contact" className="footer-link" data-cursor="hover">
+                  Contact
                 </Link>
               </li>
             </ul>
@@ -54,7 +54,7 @@ const Footer = () => {
             <h4 className="footer-heading">Connect</h4>
             <div className="footer-social-links">
               <a
-                href="https://twitter.com/KPRVERSE"
+                href="https://twitter.com/stillhollow"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"
@@ -63,24 +63,24 @@ const Footer = () => {
                 Twitter
               </a>
               <a
-                href="https://discord.com/invite/kpr"
+                href="https://github.com/stillhollow-studios"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="footer-social-link"
                 data-cursor="hover"
               >
-                Discord
+                GitHub
               </a>
             </div>
           </div>
 
           {/* Terminal Info */}
           <div className="footer-terminal">
-            <h4 className="footer-heading">System</h4>
+            <h4 className="footer-heading">Studio</h4>
             <div className="footer-terminal-info">
-              <p className="terminal-text">STATUS: ONLINE</p>
-              <p className="terminal-text">PROTOCOL: v2.4.1</p>
-              <p className="terminal-text">NODES: 8,391 ACTIVE</p>
+              <p className="terminal-text">STATUS: READY</p>
+              <p className="terminal-text">PROTOCOL: v3.1.2</p>
+              <p className="terminal-text">PROJECTS: 42 ACTIVE</p>
             </div>
           </div>
         </div>
