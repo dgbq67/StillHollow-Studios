@@ -1,0 +1,151 @@
+/* Custom Cursor Styles */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  background: rgb(100 116 139);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease-out;
+  /* Hide on mobile devices */
+  @media (pointer: coarse) {
+    display: none;
+  }
+}
+
+.cursor.hover {
+  transform: translate(-50%, -50%) scale(1.5);
+  mix-blend-mode: difference;
+  background: rgb(255 170 0);
+}
+
+.cursor.click {
+  animation: cursorPulse 0.3s ease-out;
+}
+
+.cursor.pointer {
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgb(0 255 0);
+}
+
+.cursor.text {
+  transform: translate(-50%, -50%) scale(1.2);
+  background: rgb(255 170 0);
+  border: 1px solid rgba(255 170 0, 0.5);
+}
+
+@keyframes cursorPulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(3);
+    opacity: 0;
+  }
+}
+
+/* Target elements that trigger cursor changes */
+[data-cursor="hover"]:hover ~ .cursor,
+button:hover ~ .cursor,
+a:hover ~ .cursor,
+.nav-link:hover ~ .cursor,
+input:hover ~ .cursor,
+textarea:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.5);
+  mix-blend-mode: difference;
+  background: rgb(255 170 0);
+}
+
+[data-cursor="pointer"]:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgb(0 255 0);
+}
+
+[data-cursor="text"]:hover ~ .cursor {
+  transform: translate(-50%, -50%) scale(1.2);
+  background: rgb(255 170 0);
+  border: 1px solid rgba(255 170 0, 0.5);
+}
+
+/* Cursor trail effect */
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: rgba(100 116 139, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.3s ease-out;
+  @media (pointer: coarse) {
+    display: none;
+  }
+}
+
+/* Custom cursor for different interactive elements */
+.cursor-hover-area {
+  position: relative;
+}
+
+.cursor-hover-area::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid rgba(0, 255, 0, 0.3);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.cursor-hover-area:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* Loading state for cursor */
+.cursor.loading {
+  animation: cursorSpin 1s linear infinite;
+}
+
+@keyframes cursorSpin {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Disable default cursor on interactive elements */
+button,
+a,
+input,
+textarea,
+select,
+[role="button"],
+[data-cursor] {
+  cursor: none !important;
+}
+
+@media (pointer: coarse) {
+  button,
+  a,
+  input,
+  textarea,
+  select,
+  [role="button"],
+  [data-cursor] {
+    cursor: pointer !important;
+  }
+}
