@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        domains: ['kprverse.com'],
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'kprverse.com',
+                port: '',
+                pathname: '/**',
+            },
+        ],
         formats: ['image/webp', 'image/avif'],
     },
     compiler: {
