@@ -32,23 +32,23 @@ const Navigation = () => {
   };
 
   const navLinks = [
-    { href: '/', label: 'Story' },
-    { href: '/journal', label: 'Journal' },
-    { href: '/media', label: 'Media' },
-    { href: '/gallery', label: 'Gallery' },
-    { href: '/about', label: 'About' }
+    { href: '/', label: 'Portfolio' },
+    { href: '/projects', label: 'Projects' },
+    { href: '/studio', label: 'Studio' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' }
   ];
 
   const socialLinks = [
     {
-      href: 'https://twitter.com/KPRVERSE',
+      href: 'https://twitter.com/stillhollow',
       label: 'Twitter',
       target: '_blank',
       rel: 'noopener noreferrer'
     },
     {
-      href: 'https://discord.com/invite/kpr',
-      label: 'Discord',
+      href: 'https://github.com/stillhollow-studios',
+      label: 'GitHub',
       target: '_blank',
       rel: 'noopener noreferrer'
     }
