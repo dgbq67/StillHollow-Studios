@@ -262,6 +262,58 @@ const Story = () => {
           transform: translateY(-2px);
         }
 
+        .black-screen-placeholder {
+          margin: 20px 0;
+          border: 1px solid rgba(0, 255, 0, 0.2);
+          border-radius: 4px;
+          overflow: hidden;
+        }
+
+        .black-screen {
+          width: 100%;
+          height: 120px;
+          background: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: relative;
+          transition: all 0.3s ease;
+        }
+
+        .black-screen::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: linear-gradient(45deg,
+            rgba(0, 255, 0, 0.1) 0%,
+            transparent 50%,
+            rgba(0, 255, 255, 0.05) 50%,
+            transparent 100%
+          );
+          animation: scanline 4s linear infinite;
+        }
+
+        @keyframes scanline {
+          0% {
+            transform: translateX(-100%);
+          }
+          100% {
+            transform: translateX(100%);
+          }
+        }
+
+        .screen-text {
+          color: #888;
+          font-family: 'Courier New', monospace;
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+          text-shadow: 0 0 5px rgba(0, 255, 0, 0.3);
+        }
+
         @keyframes titleGlow {
           0% {
             text-shadow: 0 0 20px rgba(0, 255, 0, 0.6);
