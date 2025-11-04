@@ -1,7 +1,7 @@
 /* Import all global styles */
-@import './styles/globals.css';
-@import './styles/components/cursor.css';
-@import './styles/components/terminal.css';
-@import './styles/components/parallax.css';
-@import './styles/components/navigation.css';
-@import './styles/sections/hero.css';
+@import '../styles/globals.css';
+@import '../styles/components/cursor.css';
+@import '../styles/components/terminal.css';
+@import '../styles/components/parallax.css';
+@import '../styles/components/navigation.css';
+@import '../styles/sections/hero.css';
