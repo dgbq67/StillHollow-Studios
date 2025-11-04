@@ -73,31 +73,31 @@ const Hero = () => {
           <div className="hero-terminal">
             <div className="ascii-section">
               <TerminalText
-                text="// initializing"
+                text="// initializing studio systems"
                 delay={80}
                 className="terminal-comment"
                 startVisible={true}
               />
               <TerminalText
-                text="new files in database"
+                text="loading creative modules"
                 delay={100}
                 className="terminal-command"
                 startVisible={true}
               />
               <TerminalText
-                text=" kai_53815.jpg"
+                text=" design_workspace.psd"
                 delay={90}
                 className="terminal-file"
                 startVisible={true}
               />
               <TerminalText
-                text=" audio_log_2018116.wav"
+                text=" music_library.mp3"
                 delay={90}
                 className="terminal-file"
                 startVisible={true}
               />
               <TerminalText
-                text="activate console for access..."
+                text="activating studio interface..."
                 delay={110}
                 className="terminal-system"
                 startVisible={true}
@@ -109,13 +109,13 @@ const Hero = () => {
             <div className="ascii-art">
 {`
     ╔═══════════════════════════════════════╗
-    ║     WELCOME TO THE KPR VERSE          ║
-    ║     [KEEPERS OF THE REALM]             ║
+    ║     WELCOME TO STILLHOLLOW STUDIOS   ║
+    ║     [CREATIVE DIGITAL STUDIO]         ║
     ╠═══════════════════════════════════════╣
     ║  STATUS: ONLINE                        ║
-    ║  NODES: 8,391 ACTIVE                  ║
-    ║  PROTOCOL: v2.4.1                     ║
-    ║  ENCRYPTION: AES-256                   ║
+    ║  PROJECTS: 42 ACTIVE                  ║
+    ║  PROTOCOL: v3.1.2                     ║
+    ║  STUDIO: READY                         ║
     ╚═══════════════════════════════════════╝
 `}
             </div>
