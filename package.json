@@ -1,15 +1,15 @@
 {
-  "name": "kpr-verse-clone",
+  "name": "stillhollow-studios",
   "version": "1.0.0",
   "private": true,
-  "description": "KPR Verse website clone",
+  "description": "StillHollow Studios website",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
-  "keywords": ["nextjs", "react", "typescript", "portfolio", "nft"],
+  "keywords": ["nextjs", "react", "typescript", "portfolio", "studio"],
   "author": "",
   "license": "ISC",
   "dependencies": {
