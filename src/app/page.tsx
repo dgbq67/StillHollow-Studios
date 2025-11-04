@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Layout from '@/components/layout/Layout';
 import Hero from '@/components/sections/Hero';
+import Story from '@/components/sections/Story';
 
 export default function Home() {
   useEffect(() => {
